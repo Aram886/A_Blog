@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@400;500;700&family=Poppins:ital,wght@1,200;1,300;1,400&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/style.css">
+</head>
+<body>
+    
+    <header class="header">
+
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="blogg.html">Blogs</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section>
+        {% for a in abouts %}
+        <div class="about">
+            <h2>
+                {{a.name}}
+                <i class="fa-solid fa-face-laugh-beam"></i>
+            </h2>
+
+            <p>
+                <b>Education</b>
+                {{a.education}} <strong>2012-2024</strong><br/>
+            </p>
+
+            <p>
+                <b>Skills</b>
+                {{a.skills}}
+            </p>
+
+            <p>
+                <b>Courses</b>
+                {{a.courses}} <i class="fa-brands fa-python"></i>
+            </p>
+
+        </div>
+        {% endfor %}
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-links">
+            <h3>Social Networks</h3>
+            <ul>
+              <li><a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-brands fa-telegram"></i>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
